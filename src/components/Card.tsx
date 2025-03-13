@@ -1,12 +1,17 @@
+import React from "react";
 import styles from "./card.module.css";
 
-const Card = () => {
+interface CardProps {
+  venueName: string;
+  imgSrc: string;
+}
+
+const Card: React.FC<CardProps> = ({ venueName, imgSrc }) => {
   return (
     <div className={styles.card}>
-      <img src="/thekopend.jpg" alt="Banquet Hall" className={styles.image} />
+      <img src={imgSrc} alt={venueName} className={styles.image} />
       <div className={styles.content}>
-        <h2>The Kop End</h2>
-        <p>There's nothing more nostalgic than hearing the kop end roar and chant with pride.</p>
+        <h2 className={styles.title}>{venueName}</h2>
       </div>
     </div>
   );
