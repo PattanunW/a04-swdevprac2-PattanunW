@@ -1,23 +1,30 @@
+import Image from "next/image";
 import React from "react";
 
 const TopMenu: React.FC = () => {
-  return (
-    <nav className="bg-gray-800 p-4 text-white">
-      <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-xl font-bold">Venue Explorer</h1>
-        <ul className="flex space-x-4">
-          <li>
-            <a href="#" className="hover:text-gray-300">Home</a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-gray-300">Venues</a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-gray-300">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+  return (<nav
+    style={{
+      display: "flex",
+      justifyContent: "flex-end",  
+      alignItems: "center",
+      padding: "10px 20px",
+      backgroundColor: "#333",
+      color: "white",
+    }}
+ >
+    <div style={{ display: "flex", gap: "20px" }}>
+      <a href="/booking" style={{ color: "white", textDecoration: "none" }}>
+        Menu Item Booking
+     </a>
+      <a href="">
+        <img
+         src="/img/logo.png" 
+          alt="Logo"
+          style={{ width: "40px", height: "40px", objectFit: "contain" }}
+       />
+      </a>
+    </div>
+  </nav>
   );
 };
 

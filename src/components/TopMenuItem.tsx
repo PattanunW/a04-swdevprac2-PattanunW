@@ -7,8 +7,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <body className="bg-gray-100">
         {/* Menu Bar */}
         <header className="bg-gray-800 p-4 text-white flex items-center">
-          <Image src="/img/logo.png" alt="Logo" width={50} height={50} className="mr-4" />
-          <TopMenu />
         </header>
 
         {/* Page Content */}
